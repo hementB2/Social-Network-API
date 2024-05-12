@@ -36,3 +36,13 @@ const thoughtSchema = new Schema(
         id: false,
     }
 );
+// Define a virtual field to calculate the reaction count for a thought
+thoughtSchema.virtual('reactionCount').get(function() {
+    return this.reactions.length;
+});
+
+// Create a model for thoughts using the schema
+const Thought = model('Thought', thoughtSchema);
+
+// Export the Thought model
+module.exports = Thought;
