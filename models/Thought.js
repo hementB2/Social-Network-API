@@ -11,3 +11,18 @@ const thoughtSchema = new Schema(
             minlength: 1,
             maxlength: 280, // Fixed typo: 'maxlenght' corrected to 'maxlength'
         },
+
+          // Timestamp when the thought was created
+          createdAt: {
+            type: Date,
+            default: Date.now,
+            get: timestamp => new Date(timestamp).toLocaleString(),
+        },
+        // Username of the user who created the thought
+        username: {
+            type: String,  
+            required: true,
+        },
+        // Array of reactions associated with the thought
+        reactions: [reactionSchema],
+    },
