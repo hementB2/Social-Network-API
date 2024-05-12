@@ -26,3 +26,13 @@ const thoughtSchema = new Schema(
         // Array of reactions associated with the thought
         reactions: [reactionSchema],
     },
+    {
+        // Define JSON serialization options
+        toJSON: {
+            getters: true, // Include getters in JSON output
+            virtuals: true, // Include virtual fields in JSON output
+        },
+        // Disable virtual "id" field in JSON output
+        id: false,
+    }
+);
