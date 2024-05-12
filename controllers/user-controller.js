@@ -48,4 +48,18 @@ createUser(req, res) {
       .catch(err => res.status(500).json(err)); // Error handling for server errors
   },
 
-  
+  // 6. Add friend to user's friend list
+  addFriend(req, res) {
+    User.findOneAndUpdate(
+      { _id: req.params.userId },
+      { $addToSet: { friends: req.body.friendId || req.params.friendId} },
+      { new: true }
+    )
+      .then(userData => {
+        if (!userData) {
+          return res.status(404).json({ message: 'User not found' });
+        }
+        res.json(userData);
+      })
+      .catch(err => res.status(500).json(err)); // Error handling for server errors
+  },
