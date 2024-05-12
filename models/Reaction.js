@@ -25,3 +25,16 @@ const reactionSchema = new Schema(
         default: Date.now, // Default to the current date and time
         get: timestamp => new Date(timestamp).toLocaleDateString() // Convert date to local date string
       },
+    },
+    {
+      // Define JSON serialization options
+      toJSON: {
+        getters: true, // Include getters in JSON output
+      },
+      // Disable virtual "id" field in JSON output
+      id: false,
+    }
+  );
+  
+  // Export the reaction schema
+  module.exports = reactionSchema;
