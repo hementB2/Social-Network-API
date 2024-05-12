@@ -14,3 +14,38 @@ const UserController = {
       .then(userData => res.json(userData)) // Send response with user data
       .catch(err => res.status(500).json(err)); // Error handling for server errors
   },
+
+
+// 3. Create a new user
+createUser(req, res) {
+    User.create(req.body)
+      .then(userData => res.json(userData)) // Send response with created user data
+      .catch(err => res.status(500).json(err)); // Error handling for server errors
+  },
+
+
+ // 4. Update a user by ID
+ updateUserById(req, res) {
+    User.findOneAndUpdate(req.params.id, req.body, { new: true })
+      .then(userData => {
+        if (!userData) {
+          return res.status(404).json({ message: 'User not found' });
+        }
+        res.json(userData);
+      })
+      .catch(err => res.status(500).json(err)); // Error handling for server errors
+  },
+
+   // 5. Delete a user by ID
+   deleteUserById(req, res) {
+    User.findOneAndDelete(req.params.id)
+      .then(userData => {
+        if (!userData) {
+          return res.status(404).json({ message: 'User not found' });
+        }
+        res.json({ message: 'User deleted successfully' });
+      })
+      .catch(err => res.status(500).json(err)); // Error handling for server errors
+  },
+
+  
