@@ -61,7 +61,7 @@ Node.js 16.18.1
 [GitHub Repository:](https://github.com/hementB2/Social-Network-API)
 
 ## YouTube Walkthrough Video:
-[Click Here to Watch](https://www.youtube.com/watch?v=TtLm6rTZ11I)
+[Click Here to Watch](https://drive.google.com/file/d/1BHXElp9bRFOKFzBgqaEDGcyNDPfqymzX/view)
 
 ## Screenshots:
 ![alt text](image.png)
