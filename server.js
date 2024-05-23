@@ -22,3 +22,4 @@ db.once('open', () => { // Once the MongoDB connection is established
       console.log(`API server running on port ${PORT}!`); // Log server running message
     });
 });
+
