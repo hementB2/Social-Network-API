@@ -4,20 +4,20 @@
 # Description
 Social Network API, "HementFriends," is a Node.js application interface (API) designed to facilitate CRUD operations on social networking data models using a NoSQL database. These models encompass friends, users, thoughts, and reactions, accessible individually by ID or collectively. Utilizing Node.js and Mongoose, this API provides a straightforward and scalable solution for managing social networking data, unencumbered by the constraints of traditional relational databases.
 
-## Table of Contents
+# Table of Contents
 
--The Challenge
--Usage Information
--Installation Process
--Built With
--Continued Development
--Deployed Application Link
--Github Repository
--YouTube Walkthrough Video
--Screenshots
+## The Challenge
+## Usage Information
+## Installation Process
+## Built With
+## Continued Development
+## Deployed Application Link
+## Github Repository
+## YouTube Walkthrough Video
+## Screenshots
 
 
-# The Challenge
+## The Challenge
 The task at hand was to develop a RESTful API capable of managing users, thoughts, and reactions data models for a social media startup, leveraging a NoSQL database. Crucially, the API needed to be built using Node.js and Mongoose and feature endpoints capable of handling substantial volumes of unstructured data.
 
 ## Usage Information
